@@ -21,6 +21,9 @@
     <ClInclude Include="patterns\observer.h">
       <Filter>patterns</Filter>
     </ClInclude>
+    <ClInclude Include="patterns\decorator.h">
+      <Filter>patterns</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp">

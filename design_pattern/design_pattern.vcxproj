@@ -74,6 +74,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="patterns\decorator.h" />
     <ClInclude Include="patterns\observer.h" />
   </ItemGroup>
   <ItemGroup>

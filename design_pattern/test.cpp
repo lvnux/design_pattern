@@ -1,6 +1,7 @@
 #include "patterns/observer.h"
+#include "patterns/decorator.h"
 
-int main(int argc , char *argv [])
+void test_observe()
 {
 	Blog* blog = new BlogCSDN("lvnux");
 	Observer* observer1 = new ObserverBlog("lvpj", blog);
@@ -13,6 +14,21 @@ int main(int argc , char *argv [])
 
 	delete blog;
 	delete observer1;
+}
+
+void test_decorator()
+{
+	Component* com = new ConcreteComponent();
+	Decorator* dec = new ConcreteDecorator(com);
+	dec->Operation();
+}
+
+
+int main(int argc , char *argv [])
+{
+	//test_observe();
+
+	test_decorator();
 
 	return 0;
 }

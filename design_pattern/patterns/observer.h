@@ -4,6 +4,7 @@
 #include <string>
 #include <list>
 #include <iostream>
+
 using namespace std;
 
 class Observer
@@ -30,40 +31,40 @@ public:
 		}
 	}
 
-	virtual void SetStatus(string s){m_status = s;}
-	virtual string GetStatus(){return m_status;}
+	virtual void SetStatus(std::string s){m_status = s;}
+	virtual std::string GetStatus(){return m_status;}
 
 private:
 	list<Observer*> m_observers;
 
 protected:
-	string m_status;
+	std::string m_status;
 };
 
 class BlogCSDN : public Blog
 {
 public:
-	BlogCSDN(string name) : m_name(name){}
+	BlogCSDN(std::string name) : m_name(name){}
 	~BlogCSDN(){}
-	void SetStatus(string s){ m_status = "CSDN通知：" + m_name + s;}
-	string GetStatus(){return m_status;}
+	void SetStatus(std::string s){ m_status = "CSDN通知：" + m_name + s;}
+	std::string GetStatus(){return m_status;}
 private:
-	string m_name;
+	std::string m_name;
 };
 
 class ObserverBlog : public Observer
 {
 public:
-	ObserverBlog(string name, Blog* blog) : m_name(name), m_blog(blog){}
+	ObserverBlog(std::string name, Blog* blog) : m_name(name), m_blog(blog){}
 	~ObserverBlog(){}
 	void Update()
 	{
-		string status = m_blog->GetStatus();
-		cout << m_name << "----" << status << endl;
+		std::string status = m_blog->GetStatus();
+		std::cout << m_name << "----" << status << endl;
 	}
 
 private:
-	string m_name;
+	std::string m_name;
 	Blog* m_blog;
 };
 
