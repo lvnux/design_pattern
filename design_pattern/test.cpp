@@ -1,8 +1,9 @@
-#include "patterns/observer.h"
-#include "patterns/decorator.h"
-#include "patterns/factory.h"
-#include "patterns/abstractFactory.h"
-#include "patterns/singleton.h"
+#include "observer.h"
+#include "decorator.h"
+#include "factory.h"
+#include "abstractFactory.h"
+#include "singleton.h"
+#include "command.h"
 
 void test_observe()
 {
@@ -57,6 +58,14 @@ void test_singlnton()
 	}
 }
 
+void test_command()
+{
+	Receiver* rev = new Receiver();
+	ConcreteCommand* concmd = new ConcreteCommand(rev);
+	Invoker* inv = new Invoker(concmd);
+	inv->Invoke();
+}
+
 int main(int argc , char *argv [])
 {
 	//test_observe();
@@ -67,7 +76,9 @@ int main(int argc , char *argv [])
 
 	//test_abstract_factory();
 
-	test_singlnton();
+	//test_singlnton();
+
+	test_command();
 
 	return 0;
 }

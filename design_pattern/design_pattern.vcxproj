@@ -39,6 +39,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>F:\code\C++\design_pattern\design_pattern\patterns;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -75,6 +76,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="patterns\abstractFactory.h" />
+    <ClInclude Include="patterns\command.h" />
     <ClInclude Include="patterns\decorator.h" />
     <ClInclude Include="patterns\factory.h" />
     <ClInclude Include="patterns\observer.h" />
