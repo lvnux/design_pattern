@@ -1,5 +1,7 @@
 #include "patterns/observer.h"
 #include "patterns/decorator.h"
+#include "patterns/factory.h"
+#include "patterns/abstractFactory.h"
 
 void test_observe()
 {
@@ -23,12 +25,32 @@ void test_decorator()
 	dec->Operation();
 }
 
+void test_factory()
+{
+	Factory* fac = new ConcreteFactory();
+	Product* pro = fac->CreateProduct();
+}
+
+void test_abstract_factory()
+{
+	AbstractFactory* cf1 = new ConcreteFactory1();
+	cf1->CreateProductA();
+	cf1->CreateProductB();
+
+	AbstractFactory* cf2 = new ConcreteFactory2();
+	cf2->CreateProductA();
+	cf2->CreateProductB();
+}
 
 int main(int argc , char *argv [])
 {
 	//test_observe();
 
-	test_decorator();
+	//test_decorator();
+
+	//test_factory();
+
+	test_abstract_factory();
 
 	return 0;
 }

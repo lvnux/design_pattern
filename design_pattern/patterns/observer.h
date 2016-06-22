@@ -1,3 +1,4 @@
+//观察者模式
 #ifndef __OBSERVER_H__
 #define __OBSERVER_H__
 
