@@ -2,6 +2,7 @@
 #include "patterns/decorator.h"
 #include "patterns/factory.h"
 #include "patterns/abstractFactory.h"
+#include "patterns/singleton.h"
 
 void test_observe()
 {
@@ -42,6 +43,20 @@ void test_abstract_factory()
 	cf2->CreateProductB();
 }
 
+void test_singlnton()
+{
+	Singlnton* sgn1 = Singlnton::Instance();
+	Singlnton* sgn2 = Singlnton::Instance();
+	if (sgn1 == sgn2)
+	{
+		cout << "singln ..." << endl;
+	}
+	else
+	{
+		cout << "not singln ..." << endl;
+	}
+}
+
 int main(int argc , char *argv [])
 {
 	//test_observe();
@@ -50,7 +65,9 @@ int main(int argc , char *argv [])
 
 	//test_factory();
 
-	test_abstract_factory();
+	//test_abstract_factory();
+
+	test_singlnton();
 
 	return 0;
 }
