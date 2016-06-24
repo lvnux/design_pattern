@@ -5,6 +5,9 @@
 #include "singleton.h"
 #include "command.h"
 
+#define _CLASS_ADAPTER__  //测试类模式Adapter还是对象模式Adapter的标识
+#include "adapter.h"
+
 void test_observe()
 {
 	Blog* blog = new BlogCSDN("lvnux");
@@ -66,6 +69,21 @@ void test_command()
 	inv->Invoke();
 }
 
+#ifdef _CLASS_ADAPTER__
+void test_adapter()
+{
+	Target* tag = new Adapter;
+	tag->Request();
+}
+#else
+void test_adapter()
+{
+	Adaptee* ade = new Adaptee;
+	Target* tag = new Adapter(ade);
+	tag->Request();
+}
+#endif
+
 int main(int argc , char *argv [])
 {
 	//test_observe();
@@ -78,7 +96,9 @@ int main(int argc , char *argv [])
 
 	//test_singlnton();
 
-	test_command();
+	//test_command();
+
+	test_adapter();
 
 	return 0;
 }
