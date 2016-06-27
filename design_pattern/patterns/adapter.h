@@ -1,6 +1,10 @@
-//适配器模式
+/*适配器模式
+ */
+
 #ifndef __ADAPTER_H__
 #define __ADAPTER_H__
+
+#include <iostream>
 
 class Target
 {

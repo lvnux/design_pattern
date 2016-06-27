@@ -1,4 +1,6 @@
-//装饰模式
+/*装饰模式
+ */
+
 #ifndef __DECORATOR_H__
 #define __DECORATOR_H__
 
@@ -31,7 +33,7 @@ class Decorator : public Component
 {
 public:
 	Decorator(Component* com) : _com(com) {}
-	virtual ~Decorator(){ delete _com; }
+	virtual ~Decorator(){}
 	void Operation(){}
 
 protected:

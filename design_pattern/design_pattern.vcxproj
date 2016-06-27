@@ -82,6 +82,8 @@
     <ClInclude Include="patterns\factory.h" />
     <ClInclude Include="patterns\observer.h" />
     <ClInclude Include="patterns\singleton.h" />
+    <ClInclude Include="patterns\strategy.h" />
+    <ClInclude Include="patterns\template.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp" />

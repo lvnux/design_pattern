@@ -1,8 +1,10 @@
-//抽象工厂模式
+/*抽象工厂模式
+ */
+
 #ifndef __ABSTRACT_FACTORY_H__
 #define __ABSTRACT_FACTORY_H__
 
-using namespace std;
+#include <iostream>
 
 //抽象产品类A
 class AbstractProductA
@@ -30,14 +32,14 @@ protected:
 class ProductA1 : public AbstractProductA
 {
 public:
-	ProductA1(){ cout << "ProductA1 ..." << endl; }
+	ProductA1(){ std::cout << "ProductA1 ..." << std::endl; }
 	~ProductA1(){}
 };
 
 class ProductA2 : public AbstractProductA
 {
 public:
-	ProductA2(){ cout << "ProductA2 ..." << endl; }
+	ProductA2(){ std::cout << "ProductA2 ..." << std::endl; }
 	~ProductA2(){}
 };
 
@@ -46,7 +48,7 @@ public:
 class ProductB1 : public AbstractProductB
 {
 public:
-	ProductB1(){ cout << "ProductB1 ..." << endl; }
+	ProductB1(){ std::cout << "ProductB1 ..." << std::endl; }
 	~ProductB1(){}
 };
 
@@ -54,7 +56,7 @@ public:
 class ProductB2 : public AbstractProductB
 {
 public:
-	ProductB2(){ cout << "ProductB2 ..." << endl; }
+	ProductB2(){ std::cout << "ProductB2 ..." << std::endl; }
 	~ProductB2(){}
 };
 

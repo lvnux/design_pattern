@@ -1,12 +1,12 @@
-//观察者模式
+/*观察者模式
+ */
+
 #ifndef __OBSERVER_H__
 #define __OBSERVER_H__
 
 #include <string>
 #include <list>
 #include <iostream>
-
-using namespace std;
 
 class Observer
 {
@@ -25,7 +25,7 @@ public:
 	void Remove(Observer* observer){m_observers.remove(observer);}
 	void Notify()
 	{
-		list<Observer*>::iterator iter = m_observers.begin();
+		std::list<Observer*>::iterator iter = m_observers.begin();
 		for (; iter != m_observers.end(); ++iter)
 		{
 			(*iter)->Update();
@@ -36,7 +36,7 @@ public:
 	virtual std::string GetStatus(){return m_status;}
 
 private:
-	list<Observer*> m_observers;
+	std::list<Observer*> m_observers;
 
 protected:
 	std::string m_status;
@@ -61,7 +61,7 @@ public:
 	void Update()
 	{
 		std::string status = m_blog->GetStatus();
-		std::cout << m_name << "----" << status << endl;
+		std::cout << m_name << "----" << status << std::endl;
 	}
 
 private:

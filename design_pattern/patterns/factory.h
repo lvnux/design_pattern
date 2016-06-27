@@ -1,10 +1,12 @@
-//工厂模式
-//1、定义创建对象的接口，封装了对象的创建
-//2、使得具体化类的工作延迟到了子类
+/* 工厂模式
+ * 1、定义创建对象的接口，封装了对象的创建
+ * 2、使得具体化类的工作延迟到了子类
+ */
+
 #ifndef __FACTORY_H__
 #define __FACTORY_H__
 
-using namespace std;
+#include <iostream>
 
 //抽象产品类
 class Product
@@ -21,7 +23,7 @@ Product::~Product(){}   //若析构函数为纯虚函数，必须要有实现。否则报错“error LN
 class ConcreteProduct : public Product
 {
 public:
-	ConcreteProduct(){ cout << "ConcreteProduct ..." << endl; }
+	ConcreteProduct(){ std::cout << "ConcreteProduct ..." << std::endl; }
 	~ConcreteProduct(){}
 };
 
@@ -44,7 +46,7 @@ class ConcreteFactory : public Factory
 {
 public:
 	~ConcreteFactory(){}
-	ConcreteFactory(){ cout << "ConcreteFactory ..." << endl; }
+	ConcreteFactory(){ std::cout << "ConcreteFactory ..." << std::endl; }
 	Product* CreateProduct(){ return new ConcreteProduct(); }
 };
 

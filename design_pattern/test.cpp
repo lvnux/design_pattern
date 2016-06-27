@@ -1,18 +1,26 @@
+/*
+设计模式原则:
+*/
+#include <iostream>
 #include "observer.h"
 #include "decorator.h"
 #include "factory.h"
 #include "abstractFactory.h"
 #include "singleton.h"
 #include "command.h"
+#include "template.h"
+#include "strategy.h"
 
-#define _CLASS_ADAPTER__  //测试类模式Adapter还是对象模式Adapter的标识
+#ifndef _CLASS_ADAPTER__
+//#define _CLASS_ADAPTER__  //测试类模式Adapter还是对象模式Adapter的标识
 #include "adapter.h"
+#endif
 
 void test_observe()
 {
-	Blog* blog = new BlogCSDN("lvnux");
-	Observer* observer1 = new ObserverBlog("lvpj", blog);
-	Observer* observer2 = new ObserverBlog("lvpingjie", blog);
+	Blog* blog = new BlogCSDN("新闻");
+	Observer* observer1 = new ObserverBlog("Lucy", blog);
+	Observer* observer2 = new ObserverBlog("Lily", blog);
 
 	blog->Attach(observer1);
 	blog->Attach(observer2);
@@ -21,6 +29,7 @@ void test_observe()
 
 	delete blog;
 	delete observer1;
+	delete observer2;
 }
 
 void test_decorator()
@@ -28,12 +37,18 @@ void test_decorator()
 	Component* com = new ConcreteComponent();
 	Decorator* dec = new ConcreteDecorator(com);
 	dec->Operation();
+
+	delete com;
+	delete dec;	
 }
 
 void test_factory()
 {
 	Factory* fac = new ConcreteFactory();
 	Product* pro = fac->CreateProduct();
+
+	delete fac;
+	delete pro;
 }
 
 void test_abstract_factory()
@@ -45,6 +60,9 @@ void test_abstract_factory()
 	AbstractFactory* cf2 = new ConcreteFactory2();
 	cf2->CreateProductA();
 	cf2->CreateProductB();
+
+	delete cf1;
+	delete cf2;
 }
 
 void test_singlnton()
@@ -53,11 +71,11 @@ void test_singlnton()
 	Singlnton* sgn2 = Singlnton::Instance();
 	if (sgn1 == sgn2)
 	{
-		cout << "singln ..." << endl;
+		std::cout << "singln ..." << std::endl;
 	}
 	else
 	{
-		cout << "not singln ..." << endl;
+		std::cout << "not singln ..." << std::endl;
 	}
 }
 
@@ -67,6 +85,10 @@ void test_command()
 	ConcreteCommand* concmd = new ConcreteCommand(rev);
 	Invoker* inv = new Invoker(concmd);
 	inv->Invoke();
+
+	delete rev;
+	delete concmd;
+	delete inv;
 }
 
 #ifdef _CLASS_ADAPTER__
@@ -74,6 +96,8 @@ void test_adapter()
 {
 	Target* tag = new Adapter;
 	tag->Request();
+
+	delete tag;
 }
 #else
 void test_adapter()
@@ -81,8 +105,32 @@ void test_adapter()
 	Adaptee* ade = new Adaptee;
 	Target* tag = new Adapter(ade);
 	tag->Request();
+
+	delete ade;
+	delete tag;
 }
 #endif
+
+void test_template()
+{
+	AbstractClass* p1 = new ConcreteClass1;
+	AbstractClass* p2 = new ConcreteClass2;
+	p1->TemplateMethod();
+	p2->TemplateMethod();
+
+	delete p1;
+	delete p2;
+}
+
+void test_strategy()
+{
+	Strategy* stg = new ConcreteStrategyA;
+	Context* ctt = new Context(stg);
+	ctt->DoAction();
+
+	delete stg;
+	delete ctt;
+}
 
 int main(int argc , char *argv [])
 {
@@ -98,7 +146,11 @@ int main(int argc , char *argv [])
 
 	//test_command();
 
-	test_adapter();
+	//test_adapter();
+
+	//test_template();
+
+	test_strategy();
 
 	return 0;
 }

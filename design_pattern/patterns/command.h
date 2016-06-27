@@ -1,8 +1,10 @@
-//命令模式
+/*命令模式
+ */
+
 #ifndef __COMMAND_H__
 #define __COMMAND_H__
 
-using namespace std;
+#include <iostream>
 
 class Receiver
 {
@@ -11,7 +13,7 @@ public:
 	~Receiver(){}
 
 public:
-	void Action(){ cout << "Receiver action ..." << endl; }
+	void Action(){ std::cout << "Receiver action ..." << std::endl; }
 };
 
 

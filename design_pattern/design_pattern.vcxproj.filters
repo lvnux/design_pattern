@@ -39,6 +39,12 @@
     <ClInclude Include="patterns\adapter.h">
       <Filter>patterns</Filter>
     </ClInclude>
+    <ClInclude Include="patterns\template.h">
+      <Filter>patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\strategy.h">
+      <Filter>patterns</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp">
