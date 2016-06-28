@@ -12,6 +12,7 @@
 #include "template.h"
 #include "strategy.h"
 #include "bridge.h"
+#include "proxy.h"
 
 #ifndef _CLASS_ADAPTER__
 //#define _CLASS_ADAPTER__  //测试类模式Adapter还是对象模式Adapter的标识
@@ -145,6 +146,16 @@ void test_bridge()
 	delete act;
 }
 
+void test_proxy()
+{
+	Subject* sbj = new ConcreteSubject;
+	Proxy* pro = new Proxy(sbj);
+	pro->Request();
+
+	delete sbj;
+	delete pro;
+}
+
 int main(int argc , char *argv [])
 {
 	//test_observe();
@@ -165,7 +176,9 @@ int main(int argc , char *argv [])
 
 	//test_strategy();
 
-	test_bridge();
+	//test_bridge();
+
+	test_proxy();
 
 	return 0;
 }
