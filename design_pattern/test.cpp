@@ -1,6 +1,7 @@
 /*
 设计模式原则:
 */
+
 #include <iostream>
 #include "observer.h"
 #include "decorator.h"
@@ -10,6 +11,7 @@
 #include "command.h"
 #include "template.h"
 #include "strategy.h"
+#include "bridge.h"
 
 #ifndef _CLASS_ADAPTER__
 //#define _CLASS_ADAPTER__  //测试类模式Adapter还是对象模式Adapter的标识
@@ -132,6 +134,17 @@ void test_strategy()
 	delete ctt;
 }
 
+void test_bridge()
+{
+	AbstractionImp* impA = new ConcreteAbstractionImpA;
+	Abstraction* act = new RefinedAbstraction(impA);
+
+	act->Operation();
+
+	delete impA;
+	delete act;
+}
+
 int main(int argc , char *argv [])
 {
 	//test_observe();
@@ -150,7 +163,9 @@ int main(int argc , char *argv [])
 
 	//test_template();
 
-	test_strategy();
+	//test_strategy();
+
+	test_bridge();
 
 	return 0;
 }
