@@ -51,6 +51,9 @@
     <ClInclude Include="patterns\proxy.h">
       <Filter>patterns</Filter>
     </ClInclude>
+    <ClInclude Include="patterns\prototype.h">
+      <Filter>patterns</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp">
