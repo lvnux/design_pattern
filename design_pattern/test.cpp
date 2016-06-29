@@ -14,6 +14,7 @@
 #include "bridge.h"
 #include "proxy.h"
 #include "prototype.h"
+#include "builder.h"
 
 #ifndef _CLASS_ADAPTER__
 //#define _CLASS_ADAPTER__  //测试类模式Adapter还是对象模式Adapter的标识
@@ -166,6 +167,16 @@ void test_prototype()
 	delete p1;
 }
 
+void test_builder()
+{
+	Builder* bld = new ConcreteBuilder;
+	Director* dct = new Director(bld);
+	dct->Construct();
+
+	ProductBuild* pdt = bld->GetProduct();
+	pdt->Show();
+}
+
 int main(int argc , char *argv [])
 {
 	//test_observe();
@@ -190,7 +201,9 @@ int main(int argc , char *argv [])
 
 	//test_proxy();
 
-	test_prototype();
+	//test_prototype();
+
+	test_builder();
 
 	return 0;
 }

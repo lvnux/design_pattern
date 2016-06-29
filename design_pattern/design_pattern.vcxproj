@@ -78,6 +78,7 @@
     <ClInclude Include="patterns\abstractFactory.h" />
     <ClInclude Include="patterns\adapter.h" />
     <ClInclude Include="patterns\bridge.h" />
+    <ClInclude Include="patterns\builder.h" />
     <ClInclude Include="patterns\command.h" />
     <ClInclude Include="patterns\decorator.h" />
     <ClInclude Include="patterns\factory.h" />
