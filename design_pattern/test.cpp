@@ -15,6 +15,7 @@
 #include "proxy.h"
 #include "prototype.h"
 #include "builder.h"
+#include "composite.h"
 
 #ifndef _CLASS_ADAPTER__
 //#define _CLASS_ADAPTER__  //测试类模式Adapter还是对象模式Adapter的标识
@@ -175,6 +176,22 @@ void test_builder()
 
 	ProductBuild* pdt = bld->GetProduct();
 	pdt->Show();
+
+	delete bld;
+	delete dct;
+}
+
+void test_composite()
+{
+	Leaf* l = new Leaf;
+	l->Operation();
+
+	ComponentComposite* com = new Composite;
+	com->Add(l);
+	com->Operation();
+
+	ComponentComposite* l1 = com->GetChild(0);
+	l1->Operation();
 }
 
 int main(int argc , char *argv [])
@@ -203,7 +220,9 @@ int main(int argc , char *argv [])
 
 	//test_prototype();
 
-	test_builder();
+	//test_builder();
+
+	test_composite();
 
 	return 0;
 }

@@ -17,6 +17,12 @@ protected:
 	Prototype(){}
 };
 
+Prototype* Prototype::Clone() const
+{
+	std::cout << "Prototype::Prototype ..." << std::endl;
+	return NULL;
+}
+
 class ConcretePrototype: public Prototype
 {
 public:

@@ -80,6 +80,7 @@
     <ClInclude Include="patterns\bridge.h" />
     <ClInclude Include="patterns\builder.h" />
     <ClInclude Include="patterns\command.h" />
+    <ClInclude Include="patterns\composite.h" />
     <ClInclude Include="patterns\decorator.h" />
     <ClInclude Include="patterns\factory.h" />
     <ClInclude Include="patterns\observer.h" />
@@ -91,9 +92,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
