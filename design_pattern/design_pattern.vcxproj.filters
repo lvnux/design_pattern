@@ -60,6 +60,9 @@
     <ClInclude Include="patterns\composite.h">
       <Filter>patterns</Filter>
     </ClInclude>
+    <ClInclude Include="patterns\flyweight.h">
+      <Filter>patterns</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp">

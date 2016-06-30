@@ -16,6 +16,7 @@
 #include "prototype.h"
 #include "builder.h"
 #include "composite.h"
+#include "flyweight.h"
 
 #ifndef _CLASS_ADAPTER__
 //#define _CLASS_ADAPTER__  //测试类模式Adapter还是对象模式Adapter的标识
@@ -194,6 +195,21 @@ void test_composite()
 	l1->Operation();
 }
 
+void test_flyweight()
+{
+	FlyweightFactory* fc = new FlyweightFactory;
+
+	Flyweight* fw1 = fc->GetFlyweight("hello");
+	Flyweight* fw2 = fc->GetFlyweight("world");
+	Flyweight* fw3 = fc->GetFlyweight("hello");
+
+	fw1->Operation("Lucy");
+	fw2->Operation("Lily");
+	fw3->Operation("Samao");
+
+	delete fc;
+}
+
 int main(int argc , char *argv [])
 {
 	//test_observe();
@@ -222,7 +238,9 @@ int main(int argc , char *argv [])
 
 	//test_builder();
 
-	test_composite();
+	//test_composite();
+
+	test_flyweight();
 
 	return 0;
 }

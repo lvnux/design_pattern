@@ -83,6 +83,7 @@
     <ClInclude Include="patterns\composite.h" />
     <ClInclude Include="patterns\decorator.h" />
     <ClInclude Include="patterns\factory.h" />
+    <ClInclude Include="patterns\flyweight.h" />
     <ClInclude Include="patterns\observer.h" />
     <ClInclude Include="patterns\prototype.h" />
     <ClInclude Include="patterns\proxy.h" />
