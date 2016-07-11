@@ -1,5 +1,10 @@
-/*
-设计模式原则:
+/*设计模式原则:
+ 1、单一职责原则（Single Responsibility Principle）
+ 2、里氏替换原则（Liskov Substitution Principle）
+ 3、依赖倒置原则（Dependence Inversion Principle）
+ 4、接口隔离原则（Interface Segregation Principle）
+ 5、迪米特法则（Law Of Demeter）
+ 6、开闭原则（Open Close Principle）
 */
 
 #include <iostream>
@@ -17,6 +22,7 @@
 #include "builder.h"
 #include "composite.h"
 #include "flyweight.h"
+#include "facade.h"
 
 #ifndef _CLASS_ADAPTER__
 //#define _CLASS_ADAPTER__  //测试类模式Adapter还是对象模式Adapter的标识
@@ -210,6 +216,14 @@ void test_flyweight()
 	delete fc;
 }
 
+void test_facade()
+{
+	Facade* f = new Facade;
+	f->OperationWrapper();
+
+	delete f;
+}
+
 int main(int argc , char *argv [])
 {
 	//test_observe();
@@ -240,7 +254,9 @@ int main(int argc , char *argv [])
 
 	//test_composite();
 
-	test_flyweight();
+	//test_flyweight();
+
+	test_facade();
 
 	return 0;
 }
