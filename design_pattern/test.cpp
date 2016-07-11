@@ -23,6 +23,7 @@
 #include "composite.h"
 #include "flyweight.h"
 #include "facade.h"
+#include "state.h"
 
 #ifndef _CLASS_ADAPTER__
 //#define _CLASS_ADAPTER__  //测试类模式Adapter还是对象模式Adapter的标识
@@ -224,6 +225,20 @@ void test_facade()
 	delete f;
 }
 
+void test_state()
+{
+	State* st = new ConcreteStateA;
+	ContextState* con = new ContextState(st);
+	con->OperationChangeState();
+	con->OperationChangeState();
+	con->OperationChangeState();
+	con->OperationChangeState();
+	con->OperationChangeState();
+
+	delete st;
+	delete con;
+}
+
 int main(int argc , char *argv [])
 {
 	//test_observe();
@@ -256,7 +271,9 @@ int main(int argc , char *argv [])
 
 	//test_flyweight();
 
-	test_facade();
+	//test_facade();
+
+	test_state();
 
 	return 0;
 }

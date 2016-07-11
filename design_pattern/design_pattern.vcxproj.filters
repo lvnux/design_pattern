@@ -66,6 +66,9 @@
     <ClInclude Include="patterns\facade.h">
       <Filter>patterns</Filter>
     </ClInclude>
+    <ClInclude Include="patterns\state.h">
+      <Filter>patterns</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp">

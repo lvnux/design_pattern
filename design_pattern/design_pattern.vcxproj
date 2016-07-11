@@ -89,6 +89,7 @@
     <ClInclude Include="patterns\prototype.h" />
     <ClInclude Include="patterns\proxy.h" />
     <ClInclude Include="patterns\singleton.h" />
+    <ClInclude Include="patterns\state.h" />
     <ClInclude Include="patterns\strategy.h" />
     <ClInclude Include="patterns\template.h" />
   </ItemGroup>
