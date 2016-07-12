@@ -24,6 +24,7 @@
 #include "flyweight.h"
 #include "facade.h"
 #include "state.h"
+#include "memento.h"
 
 #ifndef _CLASS_ADAPTER__
 //#define _CLASS_ADAPTER__  //测试类模式Adapter还是对象模式Adapter的标识
@@ -32,18 +33,18 @@
 
 void test_observe()
 {
-	Blog* blog = new BlogCSDN("新闻");
-	Observer* observer1 = new ObserverBlog("Lucy", blog);
-	Observer* observer2 = new ObserverBlog("Lily", blog);
+	SubjectObserver* sub = new ConcreteSubjectObserverA;
+	Observer* ob1 = new ConcreteObserverA(sub);
+	Observer* ob2 = new ConcreteObserverB(sub);
 
-	blog->Attach(observer1);
-	blog->Attach(observer2);
-	blog->SetStatus("状态变了");
-	blog->Notify();
+	sub->SetState("old");
+	sub->Notify();
+	sub->SetState("new");
+	sub->Notify();
 
-	delete blog;
-	delete observer1;
-	delete observer2;
+	delete sub;
+	delete ob1;
+	delete ob2;
 }
 
 void test_decorator()
@@ -239,6 +240,23 @@ void test_state()
 	delete con;
 }
 
+void test_memento()
+{
+	Originator* o = new Originator;
+	o->SetState("old");
+	o->PrintState();
+
+	Memento* m = o->CreateMemento();  //备忘当前状态
+
+	o->SetState("new");
+	o->PrintState();
+
+	o->RestoreToMemento(m);  //恢复状态
+	o->PrintState();
+
+	delete o;
+}
+
 int main(int argc , char *argv [])
 {
 	//test_observe();
@@ -273,7 +291,9 @@ int main(int argc , char *argv [])
 
 	//test_facade();
 
-	test_state();
+	//test_state();
+
+	test_memento();
 
 	return 0;
 }

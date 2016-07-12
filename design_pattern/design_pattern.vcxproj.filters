@@ -69,10 +69,16 @@
     <ClInclude Include="patterns\state.h">
       <Filter>patterns</Filter>
     </ClInclude>
+    <ClInclude Include="patterns\memento.h">
+      <Filter>patterns</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="patterns\observer.cpp">
+      <Filter>patterns</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

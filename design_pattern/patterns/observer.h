@@ -1,72 +1,87 @@
 /*观察者模式
+ 【观察者模式（Observer）：定义了一种一对多的依赖关系，让多个观察者对象同时监听某一个主题对象。这个主题在状态发生变化时，会通知所有观察者对象，使它们能够自动更新自己。】
  */
 
 #ifndef __OBSERVER_H__
 #define __OBSERVER_H__
 
-#include <string>
-#include <list>
 #include <iostream>
+#include <list>
+#include <string>
+
+class Observer;
+class SubjectObserver
+{
+public:
+	SubjectObserver();
+	virtual ~SubjectObserver();
+
+public:
+	virtual void Attach(Observer* obv);
+	virtual void Detach(Observer* obv);
+	virtual void Notify();
+	virtual void SetState(const std::string& st) = 0;
+	virtual std::string GetState() = 0;
+
+private:
+	std::list<Observer*> m_observers;
+};
+
+class ConcreteSubjectObserverA : public SubjectObserver
+{
+public:
+	ConcreteSubjectObserverA();
+	~ConcreteSubjectObserverA();
+
+public:
+	void SetState(const std::string& st);
+	std::string GetState();
+private:
+	std::string m_status;
+};
+
 
 class Observer
 {
 public:
 	Observer(){}
-	virtual ~Observer(){}
-	virtual void Update(){}
-};
+	~Observer(){}
 
-class Blog
-{
 public:
-	Blog(){}
-	virtual ~Blog(){}
-	void Attach(Observer* observer){m_observers.push_back(observer);}
-	void Remove(Observer* observer){m_observers.remove(observer);}
-	void Notify()
-	{
-		std::list<Observer*>::iterator iter = m_observers.begin();
-		for (; iter != m_observers.end(); ++iter)
-		{
-			(*iter)->Update();
-		}
-	}
-
-	virtual void SetStatus(std::string s){m_status = s;}
-	virtual std::string GetStatus(){return m_status;}
-
-private:
-	std::list<Observer*> m_observers;
+	virtual void Update(SubjectObserver* sub) = 0;
+	virtual void PrintInfo() = 0;
 
 protected:
 	std::string m_status;
+
 };
 
-class BlogCSDN : public Blog
+class ConcreteObserverA : public Observer
 {
 public:
-	BlogCSDN(std::string name) : m_name(name){}
-	~BlogCSDN(){}
-	void SetStatus(std::string s){ m_status = "CSDN通知：" + m_name + s;}
-	std::string GetStatus(){return m_status;}
+	ConcreteObserverA(SubjectObserver* sub);
+	~ConcreteObserverA();
+
+public:
+	void Update(SubjectObserver* sub);
+	void PrintInfo();
+
 private:
-	std::string m_name;
+	SubjectObserver* m_pSub;
 };
 
-class ObserverBlog : public Observer
+class ConcreteObserverB : public Observer
 {
 public:
-	ObserverBlog(std::string name, Blog* blog) : m_name(name), m_blog(blog){}
-	~ObserverBlog(){}
-	void Update()
-	{
-		std::string status = m_blog->GetStatus();
-		std::cout << m_name << "----" << status << std::endl;
-	}
+	ConcreteObserverB(SubjectObserver* sub);
+	~ConcreteObserverB();
+
+public:
+	void Update(SubjectObserver* sub);
+	void PrintInfo();
 
 private:
-	std::string m_name;
-	Blog* m_blog;
+	SubjectObserver* m_pSub;
 };
 
 #endif  //__OBSERVER_H__

@@ -85,6 +85,7 @@
     <ClInclude Include="patterns\facade.h" />
     <ClInclude Include="patterns\factory.h" />
     <ClInclude Include="patterns\flyweight.h" />
+    <ClInclude Include="patterns\memento.h" />
     <ClInclude Include="patterns\observer.h" />
     <ClInclude Include="patterns\prototype.h" />
     <ClInclude Include="patterns\proxy.h" />
@@ -94,6 +95,7 @@
     <ClInclude Include="patterns\template.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="patterns\observer.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
