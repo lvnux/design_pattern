@@ -16,74 +16,83 @@
     <Filter Include="patterns">
       <UniqueIdentifier>{fd51a521-c1a9-455a-b62e-f98226298108}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="patterns\observer.h">
-      <Filter>patterns</Filter>
-    </ClInclude>
-    <ClInclude Include="patterns\decorator.h">
-      <Filter>patterns</Filter>
-    </ClInclude>
-    <ClInclude Include="patterns\factory.h">
-      <Filter>patterns</Filter>
-    </ClInclude>
-    <ClInclude Include="patterns\abstractFactory.h">
-      <Filter>patterns</Filter>
-    </ClInclude>
-    <ClInclude Include="patterns\singleton.h">
-      <Filter>patterns</Filter>
-    </ClInclude>
-    <ClInclude Include="patterns\command.h">
-      <Filter>patterns</Filter>
-    </ClInclude>
-    <ClInclude Include="patterns\adapter.h">
-      <Filter>patterns</Filter>
-    </ClInclude>
-    <ClInclude Include="patterns\template.h">
-      <Filter>patterns</Filter>
-    </ClInclude>
-    <ClInclude Include="patterns\strategy.h">
-      <Filter>patterns</Filter>
-    </ClInclude>
-    <ClInclude Include="patterns\bridge.h">
-      <Filter>patterns</Filter>
-    </ClInclude>
-    <ClInclude Include="patterns\proxy.h">
-      <Filter>patterns</Filter>
-    </ClInclude>
-    <ClInclude Include="patterns\prototype.h">
-      <Filter>patterns</Filter>
-    </ClInclude>
-    <ClInclude Include="patterns\builder.h">
-      <Filter>patterns</Filter>
-    </ClInclude>
-    <ClInclude Include="patterns\composite.h">
-      <Filter>patterns</Filter>
-    </ClInclude>
-    <ClInclude Include="patterns\flyweight.h">
-      <Filter>patterns</Filter>
-    </ClInclude>
-    <ClInclude Include="patterns\facade.h">
-      <Filter>patterns</Filter>
-    </ClInclude>
-    <ClInclude Include="patterns\state.h">
-      <Filter>patterns</Filter>
-    </ClInclude>
-    <ClInclude Include="patterns\memento.h">
-      <Filter>patterns</Filter>
-    </ClInclude>
+    <Filter Include="patterns\Creational_Patterns">
+      <UniqueIdentifier>{808b3ac2-09dd-4397-9d06-2a055bcc5057}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="patterns\Behavioral_Patterns">
+      <UniqueIdentifier>{80be3a08-17b0-42a5-993f-3d36f64afe98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="patterns\Structural_Patterns">
+      <UniqueIdentifier>{b43526e0-37e5-4477-928d-06e845d93dde}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="patterns\observer.cpp">
-      <Filter>patterns</Filter>
+    <ClCompile Include="patterns\Behavioral_Patterns\observer.cpp">
+      <Filter>patterns\Behavioral_Patterns</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="principle.txt">
       <Filter>资源文件</Filter>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="patterns\Creational_Patterns\abstractFactory.h">
+      <Filter>patterns\Creational_Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\Creational_Patterns\builder.h">
+      <Filter>patterns\Creational_Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\Creational_Patterns\factory.h">
+      <Filter>patterns\Creational_Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\Creational_Patterns\prototype.h">
+      <Filter>patterns\Creational_Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\Creational_Patterns\singleton.h">
+      <Filter>patterns\Creational_Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\Behavioral_Patterns\command.h">
+      <Filter>patterns\Behavioral_Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\Behavioral_Patterns\memento.h">
+      <Filter>patterns\Behavioral_Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\Behavioral_Patterns\observer.h">
+      <Filter>patterns\Behavioral_Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\Behavioral_Patterns\state.h">
+      <Filter>patterns\Behavioral_Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\Behavioral_Patterns\strategy.h">
+      <Filter>patterns\Behavioral_Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\Behavioral_Patterns\template.h">
+      <Filter>patterns\Behavioral_Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\Structural_Patterns\adapter.h">
+      <Filter>patterns\Structural_Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\Structural_Patterns\bridge.h">
+      <Filter>patterns\Structural_Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\Structural_Patterns\decorator.h">
+      <Filter>patterns\Structural_Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\Structural_Patterns\facade.h">
+      <Filter>patterns\Structural_Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\Structural_Patterns\flyweight.h">
+      <Filter>patterns\Structural_Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\Structural_Patterns\proxy.h">
+      <Filter>patterns\Structural_Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\Structural_Patterns\composite.h">
+      <Filter>patterns\Structural_Patterns</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -8,28 +8,34 @@
 */
 
 #include <iostream>
-#include "observer.h"
-#include "decorator.h"
-#include "factory.h"
-#include "abstractFactory.h"
-#include "singleton.h"
-#include "command.h"
-#include "template.h"
-#include "strategy.h"
-#include "bridge.h"
-#include "proxy.h"
-#include "prototype.h"
-#include "builder.h"
-#include "composite.h"
-#include "flyweight.h"
-#include "facade.h"
-#include "state.h"
-#include "memento.h"
 
+//创建型模式
+#include "patterns/Creational_Patterns/factory.h"
+#include "patterns/Creational_Patterns/abstractFactory.h"
+#include "patterns/Creational_Patterns/singleton.h"
+#include "patterns/Creational_Patterns/builder.h"
+#include "patterns/Creational_Patterns/prototype.h"
+
+//结构型模式
+#include "patterns/Structural_Patterns/bridge.h"
 #ifndef _CLASS_ADAPTER__
 //#define _CLASS_ADAPTER__  //测试类模式Adapter还是对象模式Adapter的标识
-#include "adapter.h"
+#include "patterns/Structural_Patterns/adapter.h"
 #endif
+#include "patterns/Structural_Patterns/decorator.h"
+#include "patterns/Structural_Patterns/composite.h"
+#include "patterns/Structural_Patterns/flyweight.h"
+#include "patterns/Structural_Patterns/facade.h"
+#include "patterns/Structural_Patterns/proxy.h"
+
+//行为模式
+#include "patterns/Behavioral_Patterns/template.h"
+#include "patterns/Behavioral_Patterns/strategy.h"
+#include "patterns/Behavioral_Patterns/state.h"
+#include "patterns/Behavioral_Patterns/observer.h"
+#include "patterns/Behavioral_Patterns/memento.h"
+#include "patterns/Behavioral_Patterns/command.h"
+
 
 void test_observe()
 {
