@@ -25,17 +25,35 @@
     <Filter Include="patterns\Structural_Patterns">
       <UniqueIdentifier>{b43526e0-37e5-4477-928d-06e845d93dde}</UniqueIdentifier>
     </Filter>
+    <Filter Include="patterns\Behavioral_Patterns\Mediator">
+      <UniqueIdentifier>{bbf9e414-d631-4b60-b54e-b607e65eb0e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="patterns\Behavioral_Patterns\Observer">
+      <UniqueIdentifier>{b98f9268-2fda-4a37-8c28-6be378005a72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="patterns\Behavioral_Patterns\Visitor">
+      <UniqueIdentifier>{adbb6567-416d-430b-ade2-932e365f2ec2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="patterns\Behavioral_Patterns\observer.cpp">
-      <Filter>patterns\Behavioral_Patterns</Filter>
+    <ClCompile Include="patterns\Behavioral_Patterns\Observer\observer.cpp">
+      <Filter>patterns\Behavioral_Patterns\Observer</Filter>
+    </ClCompile>
+    <ClCompile Include="patterns\Behavioral_Patterns\Mediator\mediator.cpp">
+      <Filter>patterns\Behavioral_Patterns\Mediator</Filter>
+    </ClCompile>
+    <ClCompile Include="patterns\Behavioral_Patterns\Visitor\visitor.cpp">
+      <Filter>patterns\Behavioral_Patterns\Visitor</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="principle.txt">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="pattern_brief.txt">
       <Filter>资源文件</Filter>
     </None>
   </ItemGroup>
@@ -59,9 +77,6 @@
       <Filter>patterns\Behavioral_Patterns</Filter>
     </ClInclude>
     <ClInclude Include="patterns\Behavioral_Patterns\memento.h">
-      <Filter>patterns\Behavioral_Patterns</Filter>
-    </ClInclude>
-    <ClInclude Include="patterns\Behavioral_Patterns\observer.h">
       <Filter>patterns\Behavioral_Patterns</Filter>
     </ClInclude>
     <ClInclude Include="patterns\Behavioral_Patterns\state.h">
@@ -93,6 +108,15 @@
     </ClInclude>
     <ClInclude Include="patterns\Structural_Patterns\composite.h">
       <Filter>patterns\Structural_Patterns</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\Behavioral_Patterns\Mediator\mediator.h">
+      <Filter>patterns\Behavioral_Patterns\Mediator</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\Behavioral_Patterns\Observer\observer.h">
+      <Filter>patterns\Behavioral_Patterns\Observer</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\Behavioral_Patterns\Visitor\visitor.h">
+      <Filter>patterns\Behavioral_Patterns\Visitor</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

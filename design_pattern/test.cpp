@@ -32,9 +32,11 @@
 #include "patterns/Behavioral_Patterns/template.h"
 #include "patterns/Behavioral_Patterns/strategy.h"
 #include "patterns/Behavioral_Patterns/state.h"
-#include "patterns/Behavioral_Patterns/observer.h"
+#include "patterns/Behavioral_Patterns/Observer/observer.h"
 #include "patterns/Behavioral_Patterns/memento.h"
 #include "patterns/Behavioral_Patterns/command.h"
+#include "patterns/Behavioral_Patterns/Mediator/mediator.h"
+#include "patterns/Behavioral_Patterns/Visitor/visitor.h"
 
 
 void test_observe()
@@ -263,6 +265,35 @@ void test_memento()
 	delete o;
 }
 
+void test_mediator()
+{
+	ConcreteMediator* pConMdt = new ConcreteMediator();
+	ConcreteColleageA* pConClgA = new ConcreteColleageA(pConMdt);
+	ConcreteColleageB* pConClgB = new ConcreteColleageB(pConMdt);
+
+	pConMdt->IntroColleage(pConClgA, pConClgB);
+
+	pConClgA->SetState("old");
+	pConClgB->SetState("old");
+	pConClgA->Action();
+	pConClgB->Action();
+
+	pConClgA->SetState("new");
+	pConClgA->Action();
+	pConClgB->Action();
+
+	pConClgB->SetState("old");
+	pConClgB->Action();
+	pConClgA->Action();
+}
+
+void test_visitor()
+{
+	Visitor* pVis = new ConcreteVisitorA();
+	Element* pElm = new ConcreteElementA();
+	pElm->Accept(pVis);
+}
+
 int main(int argc , char *argv [])
 {
 	//test_observe();
@@ -299,7 +330,11 @@ int main(int argc , char *argv [])
 
 	//test_state();
 
-	test_memento();
+	//test_memento();
+
+	//test_mediator();
+
+	test_visitor();
 
 	return 0;
 }

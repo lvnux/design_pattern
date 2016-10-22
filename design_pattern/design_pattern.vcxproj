@@ -75,19 +75,24 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="patterns\Behavioral_Patterns\observer.cpp" />
+    <ClCompile Include="patterns\Behavioral_Patterns\Mediator\mediator.cpp" />
+    <ClCompile Include="patterns\Behavioral_Patterns\Observer\observer.cpp" />
+    <ClCompile Include="patterns\Behavioral_Patterns\Visitor\visitor.cpp" />
     <ClCompile Include="test.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="pattern_brief.txt" />
     <None Include="principle.txt" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="patterns\Behavioral_Patterns\command.h" />
+    <ClInclude Include="patterns\Behavioral_Patterns\Mediator\mediator.h" />
     <ClInclude Include="patterns\Behavioral_Patterns\memento.h" />
-    <ClInclude Include="patterns\Behavioral_Patterns\observer.h" />
+    <ClInclude Include="patterns\Behavioral_Patterns\Observer\observer.h" />
     <ClInclude Include="patterns\Behavioral_Patterns\state.h" />
     <ClInclude Include="patterns\Behavioral_Patterns\strategy.h" />
     <ClInclude Include="patterns\Behavioral_Patterns\template.h" />
+    <ClInclude Include="patterns\Behavioral_Patterns\Visitor\visitor.h" />
     <ClInclude Include="patterns\Creational_Patterns\abstractFactory.h" />
     <ClInclude Include="patterns\Creational_Patterns\builder.h" />
     <ClInclude Include="patterns\Creational_Patterns\factory.h" />
