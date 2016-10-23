@@ -37,6 +37,9 @@
     <Filter Include="patterns\Behavioral_Patterns\ChianOfResponsibility">
       <UniqueIdentifier>{7a6ba8c8-aa1a-418a-ad5a-aabf0f83a284}</UniqueIdentifier>
     </Filter>
+    <Filter Include="patterns\Behavioral_Patterns\Iterator">
+      <UniqueIdentifier>{2adc5aa3-26c4-4d41-bed8-d69ee5cf9151}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp">
@@ -53,6 +56,12 @@
     </ClCompile>
     <ClCompile Include="patterns\Behavioral_Patterns\ChianOfResponsibility\ChianOfResponsibility.cpp">
       <Filter>patterns\Behavioral_Patterns\ChianOfResponsibility</Filter>
+    </ClCompile>
+    <ClCompile Include="patterns\Behavioral_Patterns\Iterator\aggregate.cpp">
+      <Filter>patterns\Behavioral_Patterns\Iterator</Filter>
+    </ClCompile>
+    <ClCompile Include="patterns\Behavioral_Patterns\Iterator\iterator.cpp">
+      <Filter>patterns\Behavioral_Patterns\Iterator</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -126,6 +135,12 @@
     </ClInclude>
     <ClInclude Include="patterns\Behavioral_Patterns\ChianOfResponsibility\ChianOfResponsibility.h">
       <Filter>patterns\Behavioral_Patterns\ChianOfResponsibility</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\Behavioral_Patterns\Iterator\aggregate.h">
+      <Filter>patterns\Behavioral_Patterns\Iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\Behavioral_Patterns\Iterator\iterator.h">
+      <Filter>patterns\Behavioral_Patterns\Iterator</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
