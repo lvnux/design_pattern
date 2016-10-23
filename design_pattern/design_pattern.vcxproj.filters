@@ -34,6 +34,9 @@
     <Filter Include="patterns\Behavioral_Patterns\Visitor">
       <UniqueIdentifier>{adbb6567-416d-430b-ade2-932e365f2ec2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="patterns\Behavioral_Patterns\ChianOfResponsibility">
+      <UniqueIdentifier>{7a6ba8c8-aa1a-418a-ad5a-aabf0f83a284}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp">
@@ -47,6 +50,9 @@
     </ClCompile>
     <ClCompile Include="patterns\Behavioral_Patterns\Visitor\visitor.cpp">
       <Filter>patterns\Behavioral_Patterns\Visitor</Filter>
+    </ClCompile>
+    <ClCompile Include="patterns\Behavioral_Patterns\ChianOfResponsibility\ChianOfResponsibility.cpp">
+      <Filter>patterns\Behavioral_Patterns\ChianOfResponsibility</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +123,9 @@
     </ClInclude>
     <ClInclude Include="patterns\Behavioral_Patterns\Visitor\visitor.h">
       <Filter>patterns\Behavioral_Patterns\Visitor</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\Behavioral_Patterns\ChianOfResponsibility\ChianOfResponsibility.h">
+      <Filter>patterns\Behavioral_Patterns\ChianOfResponsibility</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

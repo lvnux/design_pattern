@@ -37,6 +37,7 @@
 #include "patterns/Behavioral_Patterns/command.h"
 #include "patterns/Behavioral_Patterns/Mediator/mediator.h"
 #include "patterns/Behavioral_Patterns/Visitor/visitor.h"
+#include "patterns/Behavioral_Patterns/ChianOfResponsibility/ChianOfResponsibility.h"
 
 
 void test_observe()
@@ -294,6 +295,15 @@ void test_visitor()
 	pElm->Accept(pVis);
 }
 
+void test_ChinaOfResponsibility()
+{
+	Handler* ph1 = new ConcreteHandlerA();
+	Handler* ph2 = new ConcreteHandlerB();
+
+	ph1->SetSuccessor(ph2);
+	ph1->HandleRequest();
+}
+
 int main(int argc , char *argv [])
 {
 	//test_observe();
@@ -334,7 +344,9 @@ int main(int argc , char *argv [])
 
 	//test_mediator();
 
-	test_visitor();
+	//test_visitor();
+
+	test_ChinaOfResponsibility();
 
 	return 0;
 }

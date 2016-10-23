@@ -75,6 +75,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="patterns\Behavioral_Patterns\ChianOfResponsibility\ChianOfResponsibility.cpp" />
     <ClCompile Include="patterns\Behavioral_Patterns\Mediator\mediator.cpp" />
     <ClCompile Include="patterns\Behavioral_Patterns\Observer\observer.cpp" />
     <ClCompile Include="patterns\Behavioral_Patterns\Visitor\visitor.cpp" />
@@ -85,6 +86,7 @@
     <None Include="principle.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="patterns\Behavioral_Patterns\ChianOfResponsibility\ChianOfResponsibility.h" />
     <ClInclude Include="patterns\Behavioral_Patterns\command.h" />
     <ClInclude Include="patterns\Behavioral_Patterns\Mediator\mediator.h" />
     <ClInclude Include="patterns\Behavioral_Patterns\memento.h" />
