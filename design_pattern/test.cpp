@@ -38,6 +38,8 @@
 #include "patterns/Behavioral_Patterns/Mediator/mediator.h"
 #include "patterns/Behavioral_Patterns/Visitor/visitor.h"
 #include "patterns/Behavioral_Patterns/ChianOfResponsibility/ChianOfResponsibility.h"
+#include "patterns/Behavioral_Patterns/Iterator/aggregate.h"
+#include "patterns/Behavioral_Patterns/Iterator/iterator.h"
 
 
 void test_observe()
@@ -304,6 +306,16 @@ void test_ChinaOfResponsibility()
 	ph1->HandleRequest();
 }
 
+void test_iterator()
+{
+	Aggregate* pAg = new ConcreteAggregate();
+	Iterator* pItor = new ConcreteIterator(pAg);
+	for (; !pItor->IsDone(); pItor->Next())
+	{
+		std::cout << pItor->CurrentItem() << std::endl;
+	}
+}
+
 int main(int argc , char *argv [])
 {
 	//test_observe();
@@ -346,7 +358,9 @@ int main(int argc , char *argv [])
 
 	//test_visitor();
 
-	test_ChinaOfResponsibility();
+	//test_ChinaOfResponsibility();
+
+	test_iterator();
 
 	return 0;
 }
