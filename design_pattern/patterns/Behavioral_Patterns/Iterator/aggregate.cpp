@@ -1,4 +1,5 @@
 #include "aggregate.h"
+#include "iterator.h"
 #include <iostream>
 
 //Aggregate
@@ -27,6 +28,11 @@ ConcreteAggregate::~ConcreteAggregate()
 
 }
 
+
+Iterator* ConcreteAggregate::CreateIterator()
+{
+	return new ConcreteIterator(this);
+}
 
 Object ConcreteAggregate::GetItem(int iIndex)
 {
