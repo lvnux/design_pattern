@@ -76,6 +76,8 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="patterns\Behavioral_Patterns\ChianOfResponsibility\ChianOfResponsibility.cpp" />
+    <ClCompile Include="patterns\Behavioral_Patterns\Interpreter\ContextInterpreter.cpp" />
+    <ClCompile Include="patterns\Behavioral_Patterns\Interpreter\Interpreter.cpp" />
     <ClCompile Include="patterns\Behavioral_Patterns\Iterator\aggregate.cpp" />
     <ClCompile Include="patterns\Behavioral_Patterns\Iterator\iterator.cpp" />
     <ClCompile Include="patterns\Behavioral_Patterns\Mediator\mediator.cpp" />
@@ -90,6 +92,8 @@
   <ItemGroup>
     <ClInclude Include="patterns\Behavioral_Patterns\ChianOfResponsibility\ChianOfResponsibility.h" />
     <ClInclude Include="patterns\Behavioral_Patterns\command.h" />
+    <ClInclude Include="patterns\Behavioral_Patterns\Interpreter\ContextInterpreter.h" />
+    <ClInclude Include="patterns\Behavioral_Patterns\Interpreter\Interpreter.h" />
     <ClInclude Include="patterns\Behavioral_Patterns\Iterator\aggregate.h" />
     <ClInclude Include="patterns\Behavioral_Patterns\Iterator\iterator.h" />
     <ClInclude Include="patterns\Behavioral_Patterns\Mediator\mediator.h" />

@@ -40,6 +40,9 @@
     <Filter Include="patterns\Behavioral_Patterns\Iterator">
       <UniqueIdentifier>{2adc5aa3-26c4-4d41-bed8-d69ee5cf9151}</UniqueIdentifier>
     </Filter>
+    <Filter Include="patterns\Behavioral_Patterns\Interpreter">
+      <UniqueIdentifier>{7e888f46-29b8-42c4-9417-9e64f53f3fa0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="test.cpp">
@@ -62,6 +65,12 @@
     </ClCompile>
     <ClCompile Include="patterns\Behavioral_Patterns\Iterator\iterator.cpp">
       <Filter>patterns\Behavioral_Patterns\Iterator</Filter>
+    </ClCompile>
+    <ClCompile Include="patterns\Behavioral_Patterns\Interpreter\ContextInterpreter.cpp">
+      <Filter>patterns\Behavioral_Patterns\Interpreter</Filter>
+    </ClCompile>
+    <ClCompile Include="patterns\Behavioral_Patterns\Interpreter\Interpreter.cpp">
+      <Filter>patterns\Behavioral_Patterns\Interpreter</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -141,6 +150,12 @@
     </ClInclude>
     <ClInclude Include="patterns\Behavioral_Patterns\Iterator\iterator.h">
       <Filter>patterns\Behavioral_Patterns\Iterator</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\Behavioral_Patterns\Interpreter\ContextInterpreter.h">
+      <Filter>patterns\Behavioral_Patterns\Interpreter</Filter>
+    </ClInclude>
+    <ClInclude Include="patterns\Behavioral_Patterns\Interpreter\Interpreter.h">
+      <Filter>patterns\Behavioral_Patterns\Interpreter</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

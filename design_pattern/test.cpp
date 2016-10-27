@@ -40,6 +40,7 @@
 #include "patterns/Behavioral_Patterns/ChianOfResponsibility/ChianOfResponsibility.h"
 #include "patterns/Behavioral_Patterns/Iterator/aggregate.h"
 #include "patterns/Behavioral_Patterns/Iterator/iterator.h"
+#include "patterns/Behavioral_Patterns/Interpreter/Interpreter.h"
 
 
 void test_observe()
@@ -316,6 +317,15 @@ void test_iterator()
 	}
 }
 
+void test_interpreter()
+{
+	ContextInterpreter* pContext = new ContextInterpreter();
+	AbstractExpression* pTe = new TerminalExpression("hello world");
+	AbstractExpression* pNte = new NonterminalExpression(pTe, 3);
+
+	pNte->Interpreter(*pContext);
+}
+
 int main(int argc , char *argv [])
 {
 	//test_observe();
@@ -360,7 +370,9 @@ int main(int argc , char *argv [])
 
 	//test_ChinaOfResponsibility();
 
-	test_iterator();
+	//test_iterator();
+
+	test_interpreter();
 
 	return 0;
 }
